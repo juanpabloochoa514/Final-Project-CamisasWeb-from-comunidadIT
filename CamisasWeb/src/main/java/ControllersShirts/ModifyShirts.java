@@ -26,25 +26,31 @@ public class ModifyShirts extends HttpServlet {
 		String name = request.getParameter("name");
 		String priceParam = request.getParameter("price");
 		String idParam = request.getParameter("id");
-		String dateparameter = request.getParameter("datediscount");
+		String cantModr = request.getParameter("cantMod");
 		//String descriptionparam=request.getParameter("description");
 		Writer writer = response.getWriter();
 		try {
-			String shirtDateoff="2021-12-24";
+			//String shirtDateoff="2021-12-24";
 			int price = Integer.parseInt(priceParam);
 			int id = Integer.parseInt(idParam);
-			Shirt shirts = new Shirt(name,price,id);
-			if(Objects.equals(dateparameter,shirtDateoff)) {
-				Common.shirtsRepository.modifyExistingShirtDiscount(shirts);
-			}else {
-				Common.shirtsRepository.modifyExisting(shirts);
-			}
+			int cantMod =Integer.parseInt(cantModr);
+			Shirt shirts = new Shirt(name,price,id,cantMod);
+			
+			Common.shirtsRepository.modifyExisting(shirts);
 			response.setStatus(HttpServletResponse.SC_OK);
 			response.setContentType("text/html;charset=UTF-8");
+			writer.append("<!DOCTYPE html>");
+			writer.append("<html>");
+			writer.append("<head>");
+			writer.append("<link rel=\"stylesheet\" href=\"backgroundinputshirt.css\"/>");
+			writer.append("</head>");
+			writer.append("<body>");
 			writer.append("<div>"
-					+	 "Se ha Modificado la camisa con id " +shirts.getId()+ ", Con nombre =  " + shirts.getName() + " Con precio = " + shirts.getPrice()
+					+	 "Se ha Modificado la camisa con èxito "
 					+ "</div>");
-			writer.append("<a href='index.html'>Volver a menu principal</a>");
+			writer.append("<a href='index.html'>Volver al menú principal</a>");
+			writer.append("</body>");
+			writer.append("</html>");
 		}catch(Exception e){
 			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 		}

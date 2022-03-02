@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+body{
+	background-image:url('cool.png');	
+	background-size:cover;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+a{
+	font-size: 2rem;
+ 	font-family: Georgia, serif;
+	font-size: 25px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	position: relative;
+}

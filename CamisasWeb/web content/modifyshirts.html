@@ -3,18 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>CamisasWeb</title>
+		<meta name="author" content="Juan Pablo Ochoa">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="ModificarCamisa.css"/>
 	</head>
 	<body>
 		<div>
 			<h1>Modificar una camisa ya cargada en sistema</h1>
 		</div>
 		
-		<form action="ModifyShirts" method="POST">
-			<span>Identity(input):</span><input type="number" name="id"/>
-			<span>Name:</span><input type="text" name="name"/>
-			<span>Price:</span><input type="number" name="price"/>
-			<span>Date</span><input type="text" name="datediscount"/>
-			<input type="submit" value="Editar"/>
+		<form style="margin: auto; width: 100px;" action="ModifyShirts" method="POST">
+			<span>Código identificador  :</span><input type="number" name="id" required/>
+			<br>
+			<span>Descripción :</span><input type="text" name="name" required/>
+			<br>
+			<span>Precio :</span><input type="number" name="price" required/>
+			<br>
+			<span>Cantidad :</span><input type="number" name="cantMod" required/>
+			<br>
+			<button class="myButton" type="submit"> Guardar </button>
 		</form>
 		<br>
 		<br>

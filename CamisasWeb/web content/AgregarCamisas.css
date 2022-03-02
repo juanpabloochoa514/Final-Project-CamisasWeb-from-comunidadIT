@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+body{
+	background-image:url('opciones.png');	
+	background-size:cover;
+	font-family: 'Roboto', sans-serif;
+	
+}
+h1{ text-align: center}
+a{
+	text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #f09890;
+	background:linear-gradient(to bottom, #d9928d 5%, #dba7a2 100%);
+	background-color:#d9928d;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#0a020a;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:4px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #c7a8a5;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #dba7a2 5%, #d9928d 100%);
+	background-color:#dba7a2;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

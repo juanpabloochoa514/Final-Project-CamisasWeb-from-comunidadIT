@@ -3,15 +3,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>CamisasWeb</title>
+		<meta name="author" content="Juan Pablo Ochoa">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="BorrarCamisa.css"/>
 	</head>
 	<body>
 		<div>
-			<h1>Delete a single shirt :</h1>
+			<h1>Eliminar artículo :</h1>
 		</div>
 		
-		<form action="deleteOneShirt" method="POST">
-			<span>Identity :</span><input type="number" name="id"/>
-			<input type="submit" value="Delete"/>
+		<form style="margin: auto; width: 100px;" action="deleteOneShirt" method="POST">
+			<span>Código identificador  :</span><input type="number" name="id"/>
+			<button class="myButton" type="submit">Eliminar</button>
 		</form>
 		<br>
 		<br>

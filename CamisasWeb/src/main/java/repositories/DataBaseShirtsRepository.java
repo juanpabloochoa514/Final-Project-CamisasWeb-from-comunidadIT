@@ -22,7 +22,7 @@ public class DataBaseShirtsRepository implements ShirtsRepository  {
 	public void addNewShirt(Shirt shirts) {
 		int id = 0;	
 		try {
-			String insertionQuery = "INSERT INTO shirts(id,price, name) VALUES ("+shirts.getId()+" ,"+ shirts.getPrice()+",'"+shirts.getName()+"');";                     
+			String insertionQuery = "INSERT INTO shirts(id,price, name,cantidad) VALUES ("+shirts.getId()+" ,"+ shirts.getPrice()+",'"+shirts.getName()+"',"+shirts.getCant()+");";                     
 			id = dbFacade.executeInsertionQuery(insertionQuery);
 			shirts.setId(id);
 		} catch (SQLException e) {
@@ -46,14 +46,14 @@ public class DataBaseShirtsRepository implements ShirtsRepository  {
 	@Override
 	public void modifyExisting(Shirt shirts) {
 		try {
-			String updateQuery = "UPDATE shirts SET price = "+ shirts.getPrice()+", name='"+shirts.getName()+"' WHERE id = "+shirts.getId()+";";                   
+			String updateQuery = "UPDATE shirts SET price = "+ shirts.getPrice()+", cantidad ="+shirts.getCant()+", name='"+shirts.getName()+"' WHERE id = "+shirts.getId()+";";                   
 			int value = dbFacade.executeDeleteOrUpdateQuery(updateQuery);
 			System.out.println("Resultado: " + value);
 		} catch (SQLException e) {
 			System.err.println("Error al actualizar: " + e.getMessage());
 		}
 	}
-	
+	/*
 	public void modifyExistingShirtDiscount(Shirt shirts) {
 		int discount=0;
 		discount=(shirts.getPrice())-((shirts.getPrice() * 30)/100);
@@ -65,6 +65,7 @@ public class DataBaseShirtsRepository implements ShirtsRepository  {
 			System.err.println("Error al actualizar: " + e.getMessage());
 		}
 	}
+	*/
 	@Override
 	public void deleteByIndex(int index) {
 		throw new RuntimeException("Metodo deleteByIndex no implementado para DataBase");
@@ -81,9 +82,9 @@ public class DataBaseShirtsRepository implements ShirtsRepository  {
 		}
 	}
 	@Override
-	public void deleteallshirts () {//BORRAR TODAS LAS BICICLETAS
+	public void deleteallshirts () {
 		try {
-			String deletionQuery = "delete from shirts";//ACA NO ME FUNCIONA EL COMANDO PARA LIMPIAR LA TABLA
+			String deletionQuery = "delete from shirts";
 			int value = dbFacade.executeDeleteOrUpdateQuery(deletionQuery);
 			System.out.println("Resultado: " + value);
 		}catch(Exception e) {
@@ -94,7 +95,7 @@ public class DataBaseShirtsRepository implements ShirtsRepository  {
 	@Override
 	public Shirt[] getAll() {
 		try {
-			List<HashMap<String,Object>> rows = this.dbFacade.executeQueryReturningSet("SELECT * FROM shirts");
+			List<HashMap<String,Object>> rows = this.dbFacade.executeQueryReturningSet("SELECT * FROM  shirts");
 			int rowCount = rows.size();
 		    Shirt[] shirtarray = new Shirt[rowCount];
 			for (int i = 0; i < rows.size(); i++) {
@@ -122,10 +123,11 @@ public class DataBaseShirtsRepository implements ShirtsRepository  {
 		int id = (Integer) valueByColumnName.get("id");
 		String name = (String) valueByColumnName.get("name");
 		int priceStr = (Integer) valueByColumnName.get("price");
+		int cantStr=(Integer)valueByColumnName.get("cantidad");
 		//String DescStr = (String) valueByColumnName.get("description");
 		//int price = Integer.parseInt(priceStr);
 		
-		Shirt shirt = new Shirt(name,priceStr,id);
+		Shirt shirt = new Shirt(name,priceStr,id,cantStr);
 		return shirt;
 	}
 	

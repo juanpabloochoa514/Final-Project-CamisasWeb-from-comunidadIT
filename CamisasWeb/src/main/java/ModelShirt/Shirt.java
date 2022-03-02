@@ -4,15 +4,16 @@ public class Shirt {
 	private String name;
 	private int price;
 	private int id;
+	private int cant;
 	//private String discountsusseful="HAY DESCUENTO";
 	//private String discountnegative="NO HAY DESCUENTO";
 	//private String description;
 	
-	public Shirt(String name , int price,int id) {
+	public Shirt(String name , int price,int id,int cant) {
 		this.name=name;
 		this.price=price;
 		this.id=id;
-		
+		this.cant=cant;
 	}
 	/*
 	public String getDescription() {
@@ -55,5 +56,10 @@ public class Shirt {
 	public void setId(int id) {
 		this.id=id;
 	}
-	
+	public int getCant() {
+		return cant;
+	}
+	public void setCant(int cant) {
+		this.cant=cant;
+	}
 }

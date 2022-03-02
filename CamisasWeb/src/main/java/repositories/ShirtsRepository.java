@@ -9,7 +9,7 @@ public interface ShirtsRepository {
 	void  ShirtDiscount(Shirt shirts);
 	
 	void modifyExisting(Shirt shirts);
-	void modifyExistingShirtDiscount(Shirt shirts);
+	//void modifyExistingShirtDiscount(Shirt shirts);
 
 	void deleteByIndex(int index);
 	

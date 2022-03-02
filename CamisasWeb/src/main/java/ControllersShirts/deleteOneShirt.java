@@ -30,8 +30,17 @@ public class deleteOneShirt extends HttpServlet {
 		try {
 			int id = Integer.parseInt(idParam);
 			Common.shirtsRepository.deleteById(id);
-			writer.append("Identificador de la camisa: " + id + "    eleminada  ");
-			writer.append("<a href='index.html'>Volver menu principal</a>");
+			
+			writer.append("<html>");
+			writer.append("<head>");
+			writer.append("<link rel=\"stylesheet\" href=\"DeleteShirt.css\"/>");
+			writer.append("</head>");
+			writer.append("<body>");
+			writer.append("Código identificador  del artículo: " + id + "    eleminada  ");
+			writer.append("<br>");
+			writer.append("<a href='index.html'>Volver al menú principal</a>");
+			writer.append("</body>");
+			writer.append("</html>");
 			response.setContentType("text/html;charset=UTF-8");
 			response.setStatus(HttpServletResponse.SC_OK);
 		}catch(Exception e) {

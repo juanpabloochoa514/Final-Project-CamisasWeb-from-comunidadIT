@@ -3,23 +3,35 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>CamisasWeb</title>
+		<meta charset="UTF-8"/>
+		<meta name="author" content="Juan Pablo Ochoa">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="AgregarCamisas.css"/>
 	</head>
 	<body>
-		<div>
-			<h1>Agregar camisas :</h1>
+		<div class="tituloAgregarCamisas">
+			<h1><em>Agregar artículo</em> </h1>
 		</div>
-		
-		<form action="AddShirt" method="GET">
-			<span>Name:</span><input type="text" name="name"/>
-			<span>Price:</span><input type="number" name="price"/>
-			<span>Date</span><input type="text" name="dateoff"/>
-			<span>Identity(Barcode)</span><input type="number" name="id"/>
+		<div class="form-center">
+		<form style="margin: auto; width: 100px;" action="AddShirt" method="GET">
+			 
+			<label>Descripción :</label><input type="text" name="name" required/>
+			<br>
+			<label>Precio :</label><input type="number" name="price" required/>
+			<br>
+			<label>Cantidad :</label><input type="number" name="cant" required/>
+			<br>
+			<label>Código identificador :</label><input type="number" name="id" required/>
+			<br>
+			<button class="myButton" type="submit"> Guardar </button>
 			
-			<input type="submit" value="Agregar"/>
 		</form>
+		</div>
 		<br>
 		<br>
 		<br>
-		<a href="index.html">HOME</a>
+		<a href="index.html">Menú Principal</a>
 	</body>
 </html>

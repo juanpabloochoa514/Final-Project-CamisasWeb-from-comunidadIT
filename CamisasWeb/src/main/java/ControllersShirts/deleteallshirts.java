@@ -31,8 +31,18 @@ public class deleteallshirts extends HttpServlet {
 			response.setStatus(HttpServletResponse.SC_OK);
 			response.setContentType("text/html;charset=UTF-8");
 			Common.shirtsRepository.deleteallshirts();
-			writer.append("La camisas fueron eleminadas en su totalidad ");
-			writer.append("<a href='index.html'>Volver al menu</a>");
+			writer.append("<!DOCTYPE html>");
+			writer.append("<html>");
+			writer.append("<head>");
+			writer.append("<link rel=\"stylesheet\" href=\"DAS.css\"/>");
+			writer.append("</head>");
+			writer.append("<body <body style=\"\r\n"
+					+ "    background-image: url('cool2.png');\r\n"
+					+ "    background-size: cover;\r\n"
+					+ "    font-family: 'Roboto', sans-serif;\r\n"
+					+ "    text-align: center;\r\n"
+					+ "\"><h1>Todos los  artículos fueron eleminadas en su totalidad</h1><a href=\"index.html\">Volver al menú principal</a></body>>");
+			writer.append("</html>");
 		}catch(Exception e){
 			writer.append("ERROR OF SERVER" + e);
 			

@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+body{
+	background-image:url('indexMenu.jpg');	
+	background-size:cover;
+	font-family: 'Roboto', sans-serif;
+	font-size:1.8em;
+	
+}
+a:hover{
+  	font-size: 2rem;
+  	text-align: center;
+ 	font-family: Georgia, serif;
+	font-size: 25px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+.titulo{
+	font-family: Georgia, serif;
+	font-size: 27px;
+	letter-spacing: 0.2px;
+	word-spacing: 2.2px;
+	font-weight: 400;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-align: center;
+}
+.inputshirts{
+	background: white;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    border-width: 2px;
+    border-color: #d590d3;
+    border-radius: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(36 0 23 / 31%) 0%, rgba(221,61,105,0.3029586834733894) 35%, rgb(204 0 255 / 30%) 100%);
+    text-align: center;
+}
+.ModificarCamisa{
+	background: white;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    border-width: 2px;
+    border-color: #d590d3;
+    border-radius: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(36 0 23 / 31%) 0%, rgba(221,61,105,0.3029586834733894) 35%, rgb(204 0 255 / 30%) 100%);
+    text-align: center;
+}
+.deleteshirt{
+	background: white;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    border-width: 2px;
+    border-color: #d590d3;
+    border-radius: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(36 0 23 / 31%) 0%, rgba(221,61,105,0.3029586834733894) 35%, rgb(204 0 255 / 30%) 100%);
+    text-align: center;
+}
+.deleteallshirts{
+	background: white;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    border-width: 2px;
+    border-color: #d590d3;
+    border-radius: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(36 0 23 / 31%) 0%, rgba(221,61,105,0.3029586834733894) 35%, rgb(204 0 255 / 30%) 100%);
+    text-align: center;
+}
+.discotunopcionalshirts{
+	background: white;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    border-width: 2px;
+    border-color: #d590d3;
+    border-radius: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(36 0 23 / 31%) 0%, rgba(221,61,105,0.3029586834733894) 35%, rgb(204 0 255 / 30%) 100%);
+    text-align: center;
+}
